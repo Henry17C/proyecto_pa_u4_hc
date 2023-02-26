@@ -18,7 +18,7 @@ public class ProyectoPaU4HcApplication  implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		
 		
-		System.out.println("ajajajajajajaja");
+
 		
 	}
 
