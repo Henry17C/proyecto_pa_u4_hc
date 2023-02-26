@@ -1,5 +1,11 @@
 package com.example.demo.funcional;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
+
 import org.slf4j.LoggerFactory;
 
 import ch.qos.logback.classic.Logger;
@@ -10,7 +16,7 @@ public class MainInterfacesFuncionales {
 	public static void main(String[] args) {
 
 		// TODO Auto-generated method stub
-		//
+		/*
 		// 1. SUPPLIER
 		LOG.info("Supplier ");
 		// clases
@@ -99,7 +105,57 @@ public class MainInterfacesFuncionales {
 		};
 
 		LOG.info("UnaryOperator: " + unaryOperator.aplicar("Daniel"));
-
+*/
+		
+		//JAVA
+		//supplier
+		LOG.info("JAVA SUPPLIER: " );
+		Stream<String> lista=Stream.generate(() -> "Henry 2").limit(5);
+		lista.forEach(cadena->LOG.info(cadena));
+		//consummer
+		LOG.info("JAVA CONSUMMER: " );
+		
+			List<Integer> listaNumeros= Arrays.asList(1,2,3,4,5,6);
+			listaNumeros.forEach(numero->LOG.info("Valor: "+numero));
+		//predicate	
+		LOG.info("JAVA PREDICATE: " );
+		
+	
+			Stream<Integer> listaFiltrada=listaNumeros.stream().filter(numero-> numero>=3);
+			listaFiltrada.forEach(numero->LOG.info("Valor : "+numero));
+		
+		LOG.info("JAVA FUNCTION: " );
+		Stream<String> listaCambiada=listaNumeros.stream().map(numeroLista->{
+			Integer valorFinal=numeroLista+1;
+			String cadena="num: "+ valorFinal.toString();
+			return cadena;
+		});
+		
+		
+		listaCambiada.forEach(cadena-> LOG.info(cadena)); //no existe implemntada en java
+		LOG.info("JAVA UNARYoPERATOR: " );
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
+	
+	
+	
+	
+	
 }
