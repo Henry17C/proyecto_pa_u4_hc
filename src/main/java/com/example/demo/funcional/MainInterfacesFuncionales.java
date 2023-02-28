@@ -82,6 +82,7 @@ public class MainInterfacesFuncionales {
 		// (retorno, argumento)
 		IPersonaFunction<String, Integer> function1 = numero -> "VAL: " + numero.toString();
 		LOG.info(function1.aplicar(10));
+		
 		IPersonaFunction<Ciudadano, Persona> function2 = per -> {
 			Ciudadano ciu = new Ciudadano();
 			ciu.setNombreCompleto(per.getNombre() + " " + per.getApellido());
