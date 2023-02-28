@@ -8,7 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.demo.paralelo.Ciudadano;
-import com.example.demo.paralelo.repo.ICiudadanoRepo;
+
 import com.example.demo.paralelo.service.ICuidadanoService;
 
 @SpringBootApplication
@@ -51,9 +51,11 @@ public class ProyectoPaU4HcApplication  implements CommandLineRunner{
 	
 	
 		
+	
+	//Convertir un ciudadano a Estudiante
 		
 		
-		
+	ciudadanoService.procesarEstudianteParalelo();
 		
 		
 		
