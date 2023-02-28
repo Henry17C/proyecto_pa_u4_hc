@@ -17,7 +17,7 @@ public class ProyectoPaU4HcApplication  implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		
+		System.out.println("hola");
 
 		
 	}
